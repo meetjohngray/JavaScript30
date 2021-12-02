@@ -3,16 +3,12 @@ import KeyboardEventHandler from 'react-keyboard-event-handler'
 
 function Key(props) {
   const [play, setPlay] = useState(false)
-  // const toggleFunc = () => {
-  //   setPlay(!play)
-  //   }
-
-
+  const audioRef = useRef(null)
+  
   const key = props.data.key
   const letter = props.data.letter
   const sound = props.data.sound
   const audio = props.data.audio
-  const audioRef = useRef(null)
   
   return (
     <>

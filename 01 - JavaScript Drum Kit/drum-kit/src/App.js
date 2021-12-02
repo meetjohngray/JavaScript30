@@ -1,9 +1,8 @@
+// Big assist goes to https://github.com/GeoffreyHanson/drum-kit
 import data  from './data'
-
 import Key from "./Key"
 
 function App() {
-  // const keys = data.map(item => item.letter)
   
   return (
     <>
