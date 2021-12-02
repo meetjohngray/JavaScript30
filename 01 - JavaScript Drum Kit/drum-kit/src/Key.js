@@ -22,12 +22,12 @@ function Key(props) {
       audioRef.current.currentTime = 0;
       audioRef.current.play();
       setPlay(true)
-      setTimeout(()=> setPlay(false), 100)
       } 
     }
     />  
     <div data-key={key} 
-      className= {"key " + (play ? 'playing' : '')} 
+      className= {"key " + (play ? 'playing' : '')}
+      onTransitionEnd = {() => setPlay(false)} 
     >
       <kbd>{letter}</kbd>
       <span className="sound">{sound}</span>

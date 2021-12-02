@@ -5,8 +5,8 @@ import openhat from './sounds/openhat.wav';
 import boom from './sounds/boom.wav';
 import ride from './sounds/ride.wav';
 import snare from './sounds/snare.wav';
-import tom from './sounds/tom.wav';
-import tink from './sounds/tink.wav';
+// import tom from './sounds/tom.wav';
+// import tink from './sounds/tink.wav';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
