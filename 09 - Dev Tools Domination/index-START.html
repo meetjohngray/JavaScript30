@@ -14,33 +14,70 @@
     function makeGreen() {
       const p = document.querySelector('p');
       p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
+      p.style.fontSize = '50px; background: lightgrey';
     }
 
+    const str = 'here'
+
     // Regular
-
+    console.log('Hi')
+    
     // Interpolated
-
+    console.log(`backticks work ${str}!`)
+    
     // Styled
-
+    console.log('%c I am styled', 'font-size: 25px; background-color: blue')
+    
     // warning!
-
+    console.warn('Oh no!')
+    
     // Error :|
-
+    console.error('Shit!')
+    
     // Info
+    console.info('Roses are red')
 
     // Testing
+    // Only fires if false
+    const p = document.querySelector('p')
 
+    console.assert(p.classList.contains('ouch'), 'That is Wrong!')
+    
     // clearing
+    // console.clear()
 
     // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+        console.log(`This is ${dog.name}`)
+        console.log(`${dog.name} is ${dog.age} years old`)
+        console.log(`${dog.name} is ${dog.age + 7} dog years old`)
+       console.groupEnd(`${dog.name}`) 
+    })
 
     // counting
+    console.count('Mary')
+    console.count('Mary')
+    console.count('john')
+    console.count('john')
+    console.count('Mary')
+    console.count('bill')
 
     // timing
+    console.time('fetching data')
+      fetch('https://api.github.com/users/meetjohngray')
+        .then(data => data.json())
+        .then(data => {
+          console.timeEnd('fetching data')
+          console.log(data)
+        })
 
+    // Table
+    console.table(dogs)
   </script>
 </body>
 </html>
